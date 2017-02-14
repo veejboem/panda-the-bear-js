@@ -71,11 +71,12 @@ $('textarea#message').attr('placeholder', 'state your business');
 
 <!-- 11) Give the name field a "value" attribute of "your nemesis". ********-->
 
-$('input#name').append('<input value="your nemesis"></input>');
+$('input#name').val('your nemesis');
 
 <!-- 12) Change the value attribute of the email field to "koalathebear@gmail.com".******** -->
 
 $('input#email').attr('placeholder', 'koalathebear@gmail.com');
+$('input#email').val('koalathebear@gmail.com');
 
 <!-- 13) Change the value of the submit button on the contact form to "En garde!". -->
 
@@ -83,4 +84,8 @@ $('input#submit').attr('value', 'En garde!');
 
 <!-- Bonus 1) We should stop Koala from sending an email to Panda that they might regret! Find a way to disable the submit button (hint: familiarize yourself with the disabled attribute). -->
 
-$('');
+$('input#submit').appendTo('<input type= disabled>');
+
+<!-- Bonus 2) We should help Panda protect their privacy by clearing their personal details from the sidebar. You can use empty() to do this. -->
+
+$('.bio-info-value').empty('span:last-child');
