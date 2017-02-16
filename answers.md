@@ -69,7 +69,7 @@ $('input#name.contact-info').attr('placeholder','identify yourself');
 
 $('textarea#message').attr('placeholder', 'state your business');
 
-<!-- 11) Give the name field a "value" attribute of "your nemesis". ********-->
+<!-- 11) Give the name field a "value" attribute of "your nemesis". -->
 
 $('input#name').val('your nemesis');
 
@@ -89,3 +89,18 @@ $('input#submit').appendTo('<input type= disabled>');
 <!-- Bonus 2) We should help Panda protect their privacy by clearing their personal details from the sidebar. You can use empty() to do this. -->
 
 $('.bio-info-value').empty('span:last-child');
+
+<!-- Adding Elements to the DOM
+
+1) That drawing of Pikachu is really cute. Let’s duplicate it using clone() and insert it at the bottom of the page using insertAfter() or appendTo(). -->
+
+$('#right-image img').clone('div#right-image').insertAfter('form');
+
+<!-- 2) Wow, that was so satisfying I think we should do it 10 more times. Use a for loop to help you do this. -->
+
+
+for (var i=0; i < 10; i++) { $('#right-image img').clone('div#right-image').insertAfter('form') }
+
+<!-- 3) Let’s add a message about when the page was last updated. We'll do this by appending a new <li> element to the <ul> in the sidebar (you might need to refresh the page to bring back the list items that we emptied out earlier). -->
+
+$('<li class="bio-info-item"><span class="bio-info-title">Page last updated on</span><span class="bio-info-value bio-info-name">February 16th 2017</span></li>').appendTo('.bio-info');
